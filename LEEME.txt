@@ -1,0 +1,7 @@
+CULTURA ECO — PWA
+
+Este paquete conserva la interfaz del portal existente y cambia su identidad a Cultura ECO.
+Sube estos archivos a la raíz del repositorio destinado a Cultura ECO en GitHub Pages.
+El icono instalado será Cultura ECO (azul).
+
+La aplicación Persona ECO es independiente y ya no aparece como acceso dentro de Cultura ECO.
