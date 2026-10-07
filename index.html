@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#e4002b">
+  <meta name="theme-color" content="#111317">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Cultura ECO">
@@ -12,39 +12,41 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <style>
     *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#f4f5f7;color:#17191d}
+    html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#090b0e;color:#f6f7f8}
     body{display:flex;justify-content:center}
-    .app{width:min(100%,920px);min-height:100vh;background:#f7f7f8}
-    .top{background:#fff;padding:calc(14px + env(safe-area-inset-top)) 20px 14px;border-bottom:1px solid #ececef}
+    .app{width:min(100%,920px);min-height:100vh;background:linear-gradient(180deg,#111317 0,#171a1f 48%,#0d0f12 100%)}
+    .top{padding:calc(14px + env(safe-area-inset-top)) 20px 14px;background:rgba(8,10,13,.96);border-bottom:1px solid rgba(255,255,255,.08)}
     .brand{display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .brand img{width:min(68%,360px);height:auto;display:block}
-    .brand-badge{background:#e4002b;color:#fff;border-radius:999px;padding:7px 11px;font-size:11px;font-weight:700;letter-spacing:.08em;white-space:nowrap}
-    .hero{padding:28px 22px 30px;background:linear-gradient(145deg,#e4002b,#b6001e);color:#fff;position:relative;overflow:hidden}
-    .hero:after{content:"";position:absolute;width:220px;height:220px;border:34px solid rgba(255,255,255,.10);border-radius:50%;right:-100px;top:-95px}
-    .hero small{display:block;font-size:11px;font-weight:700;letter-spacing:.16em;opacity:.85;margin-bottom:8px}
-    .hero h1{margin:0;font-size:clamp(30px,5vw,42px);line-height:1.04;letter-spacing:-.02em}
-    .hero p{margin:10px 0 0;max-width:590px;font-size:15px;line-height:1.45;opacity:.92}
+    .brand img{width:min(68%,360px);height:auto;display:block;filter:drop-shadow(0 4px 12px rgba(0,0,0,.25))}
+    .brand-badge{border:1px solid rgba(255,255,255,.16);background:#191c21;color:#fff;border-radius:999px;padding:7px 11px;font-size:10px;font-weight:700;letter-spacing:.10em;white-space:nowrap}
+    .hero{min-height:210px;padding:34px 24px 30px;color:#fff;position:relative;overflow:hidden;background:radial-gradient(circle at 82% 28%,rgba(230,0,35,.32),transparent 30%),linear-gradient(135deg,#0d0f12 15%,#20242a 65%,#10090b 100%)}
+    .hero:before{content:"";position:absolute;left:-12%;right:-12%;bottom:20px;height:34px;background:linear-gradient(90deg,transparent,#e60023 25%,#ff1738 50%,#b8001c 76%,transparent);transform:rotate(-4deg);filter:blur(13px);opacity:.75}
+    .hero:after{content:"";position:absolute;width:270px;height:270px;border:1px solid rgba(255,40,70,.24);border-radius:50%;right:-75px;top:-82px;box-shadow:0 0 0 24px rgba(255,255,255,.018),0 0 0 52px rgba(230,0,35,.025)}
+    .hero small,.hero h1,.hero p{position:relative;z-index:2}
+    .hero small{display:block;font-size:10px;font-weight:700;letter-spacing:.18em;color:#ff667c;margin-bottom:9px}
+    .hero h1{margin:0;font-size:clamp(31px,5vw,43px);line-height:1.03;letter-spacing:-.025em}
+    .hero p{margin:11px 0 0;max-width:590px;font-size:15px;line-height:1.45;color:#c8ccd1}
     main{padding:22px 18px 32px}
-    .section-title{margin:0 0 14px;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#737780;font-weight:700}
+    .section-title{margin:0 0 14px;font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:#8f959d;font-weight:700}
     .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .card{min-height:126px;background:#fff;border:1px solid #e7e7ea;border-radius:20px;padding:18px;text-decoration:none;color:#17191d;display:grid;grid-template-columns:52px 1fr 20px;align-items:center;gap:13px;box-shadow:0 4px 14px rgba(17,24,39,.045);transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease}
-    .card:hover{box-shadow:0 10px 24px rgba(17,24,39,.09);border-color:#ddd}
+    .card{min-height:126px;background:linear-gradient(145deg,#20242a,#171a1f);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:18px;text-decoration:none;color:#fff;display:grid;grid-template-columns:52px 1fr 20px;align-items:center;gap:13px;box-shadow:0 9px 22px rgba(0,0,0,.18);transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease}
+    .card:hover{box-shadow:0 14px 30px rgba(0,0,0,.28);border-color:rgba(255,45,75,.30)}
     .card:active{transform:scale(.985)}
-    .ico{width:48px;height:48px;border-radius:15px;background:#fff0f2;color:#d80027;display:grid;place-items:center;font-size:23px;font-weight:700}
+    .ico{width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,#e60023,#a9001a);color:#fff;display:grid;place-items:center;font-size:23px;font-weight:700;box-shadow:0 7px 18px rgba(230,0,35,.20)}
     .copy{display:flex;flex-direction:column;gap:5px}
     .copy strong{font-size:17px;line-height:1.12}
-    .copy span{font-size:13px;line-height:1.3;color:#666c75}
-    .arrow{font-size:28px;color:#b5b7bd;font-weight:300}
-    .admin-persona{display:grid;grid-template-columns:52px 1fr 20px;align-items:center;gap:13px;margin-top:12px;min-height:116px;border-radius:20px;padding:18px;text-decoration:none;background:#20262d;color:#fff;box-shadow:0 8px 22px rgba(25,30,36,.14);transition:transform .14s ease,box-shadow .14s ease}
+    .copy span{font-size:13px;line-height:1.3;color:#aeb3ba}
+    .arrow{font-size:28px;color:#777e87;font-weight:300}
+    .admin-persona{display:grid;grid-template-columns:52px 1fr 20px;align-items:center;gap:13px;margin-top:12px;min-height:116px;border-radius:20px;padding:18px;text-decoration:none;background:linear-gradient(135deg,#32070e,#17191d 58%,#101215);border:1px solid rgba(230,0,35,.30);color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.24);transition:transform .14s ease,box-shadow .14s ease}
     .admin-persona:active{transform:scale(.985)}
-    .admin-persona:hover{box-shadow:0 12px 28px rgba(25,30,36,.20)}
-    .admin-persona .ico{background:rgba(255,255,255,.10);color:#fff}
-    .admin-persona .copy span{color:#d4d7da}
-    .admin-persona .arrow{color:#fff;opacity:.65}
-    footer{padding:0 18px calc(22px + env(safe-area-inset-bottom));text-align:center;color:#9a9da3;font-size:10px;letter-spacing:.24em}
+    .admin-persona:hover{box-shadow:0 14px 32px rgba(0,0,0,.32)}
+    .admin-persona .ico{background:#e60023;color:#fff}
+    .admin-persona .copy span{color:#b9bdc3}
+    .admin-persona .arrow{color:#fff;opacity:.55}
+    footer{padding:0 18px calc(22px + env(safe-area-inset-bottom));text-align:center;color:#666c74;font-size:10px;letter-spacing:.24em}
     @media(max-width:640px){
       .top{padding-left:16px;padding-right:16px}.brand img{width:min(66%,270px)}.brand-badge{font-size:9px;padding:6px 9px}
-      .hero{padding:24px 18px 26px}.hero h1{font-size:32px}.hero p{font-size:14px}
+      .hero{min-height:195px;padding:29px 18px 27px}.hero h1{font-size:32px}.hero p{font-size:14px;max-width:330px}
       main{padding:18px 14px 28px}.grid{grid-template-columns:1fr;gap:10px}
       .card{min-height:94px;padding:14px;grid-template-columns:46px 1fr 18px;border-radius:17px}
       .ico{width:44px;height:44px;border-radius:13px;font-size:21px}
