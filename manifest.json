@@ -2,13 +2,17 @@
   "name": "Cultura ECO",
   "short_name": "Cultura ECO",
   "description": "Portal de acceso al Ecosistema Cultura ECO",
-  "start_url": "./",
+  "start_url": "./?v=3",
   "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0b3f78",
   "icons": [
-    {"src":"assets/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
-    {"src":"assets/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+    {
+      "src": "./icon.png?v=3",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
   ]
 }
