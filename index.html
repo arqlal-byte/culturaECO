@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#111317">
+  <meta name="theme-color" content="#050d19">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Cultura ECO">
@@ -78,6 +78,28 @@
     .jarvis-rh-link img{display:block;width:100%;height:auto;border-radius:50%}
     .jarvis-rh-caption{font-size:13px;color:#9ddaff;letter-spacing:.1em;margin:10px 0 0;font-weight:700}
     @media(max-width:640px){.jarvis-rh-access{padding:18px 14px 20px}.jarvis-rh-link{width:min(76vw,290px)}}
+
+    /* Rediseño azul JARVIS RH: conserva enlaces, logotipo oficial y estructura funcional. */
+    html,body{background:#050a12;color:#f1f8ff}
+    .app{background:linear-gradient(180deg,#050a12 0%,#0b1a2d 48%,#060c16 100%)}
+    .top{background:rgba(5,13,25,.98);border-bottom:1px solid rgba(39,177,255,.24)}
+    .brand-badge{background:#10253e;border-color:rgba(64,190,255,.42);color:#a6e6ff}
+    .jarvis-rh-access{background:radial-gradient(ellipse at 50% 44%,#133858 0%,#091b30 45%,#060e1c 85%);border-bottom:1px solid rgba(56,181,255,.32);padding:24px 18px 28px}
+    .jarvis-rh-link{width:min(78vw,350px)}
+    .jarvis-rh-caption{color:#77d8ff;font-size:14px}
+    .jarvis-rh-subtitle{max-width:560px;margin:12px 0 0;color:#b4c9d9;font-size:14px;line-height:1.5}
+    .section-title{color:#90b9d3}
+    .access-group{border-top-color:rgba(83,178,235,.23)}
+    .group-evaluations .section-title,.group-personal .section-title,.group-support .section-title{color:#8edbff}
+    .card,.card-eval,.card-personal,.card-support{background:linear-gradient(145deg,#172f49,#0d1c30);border-color:rgba(90,185,244,.28);box-shadow:0 9px 24px rgba(0,0,0,.24)}
+    .card:hover{border-color:rgba(65,204,255,.7);box-shadow:0 12px 30px rgba(0,145,255,.15)}
+    .ico,.card-eval .ico,.card-personal .ico,.card-support .ico{background:linear-gradient(145deg,#0879b8,#11436e);box-shadow:0 7px 18px rgba(0,153,255,.19)}
+    .copy span{color:#afc3d5}
+    .arrow{color:#79cfff}
+    .featured-access .card-feature,.admin-persona{background:linear-gradient(115deg,#16416a,#10253f 75%);border-color:rgba(49,186,255,.52)}
+    .admin-persona .ico{background:#0879b8}
+    footer{color:#8daabe}
+    @media(max-width:640px){.jarvis-rh-access{padding:18px 14px 24px}.jarvis-rh-link{width:min(78vw,310px)}.jarvis-rh-subtitle{font-size:13px}}
   </style>
 </head>
 <body>
@@ -88,16 +110,12 @@
       <span class="brand-badge">CULTURA ECO</span>
     </div>
   </header>
-  <section class="hero">
-    <small>ECOSISTEMA DEL MODELO CULTURAL</small>
-    <h1>Herramientas Cultura ECO</h1>
-    <p>Accede a las herramientas de administración, análisis y seguimiento del Modelo Cultural.</p>
-  </section>
   <section class="jarvis-rh-access" aria-label="Acceso destacado a MonitorECO">
     <a class="jarvis-rh-link" href="https://arqlal-byte.github.io/MonitorECO" aria-label="Abrir MonitorECO mediante Jarvis RH">
       <img src="./Jarvis_RH.gif" alt="Jarvis RH, acceso animado a MonitorECO" loading="eager">
     </a>
     <p class="jarvis-rh-caption">MONITOREO ECO · JARVIS RH</p>
+    <p class="jarvis-rh-subtitle">Accede a las herramientas de administración, análisis y seguimiento del Modelo Cultural.</p>
   </section>
   <main>
     <p class="section-title">Administración y seguimiento</p>
