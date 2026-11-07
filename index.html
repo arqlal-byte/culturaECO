@@ -100,7 +100,23 @@
     .admin-persona .ico{background:#0879b8}
     footer{color:#8daabe}
     @media(max-width:640px){.jarvis-rh-access{padding:18px 14px 24px}.jarvis-rh-link{width:min(78vw,310px)}.jarvis-rh-subtitle{font-size:13px}}
-  </style>
+  .jarvis-rh-link{position:relative}
+
+/* Etiqueta sutil de JARVIS ECO: no modifica ni cubre el GIF original. */
+.jarvis-training-note{
+  position:absolute;z-index:2;right:-43px;bottom:33px;
+  display:block;width:190px;box-sizing:border-box;
+  padding:7px 10px;border:1px solid rgba(105,215,255,.62);
+  border-radius:9px;background:rgba(3,20,41,.94);
+  color:#dbf6ff;box-shadow:0 4px 16px rgba(0,0,0,.4),0 0 13px rgba(12,170,235,.22);
+  font-size:11px;font-weight:700;line-height:1.35;letter-spacing:.01em;
+  text-align:center;transform:rotate(-13deg);pointer-events:none;
+}
+.jarvis-training-note span{display:block}
+@media(max-width:640px){
+  .jarvis-training-note{right:-8px;bottom:10px;width:158px;padding:6px 7px;font-size:10px}
+}
+</style>
 </head>
 <body>
 <div class="app">
@@ -113,6 +129,7 @@
   <section class="jarvis-rh-access" aria-label="Acceso destacado a MonitorECO">
     <a class="jarvis-rh-link" href="https://arqlal-byte.github.io/MonitorECO" aria-label="Abrir MonitorECO mediante Jarvis RH">
       <img src="./Jarvis_RH.gif" alt="Jarvis RH, acceso animado a MonitorECO" loading="eager">
+      <span class="jarvis-training-note">Tenme paciencia,<span>estoy en capacitación</span></span>
     </a>
     <p class="jarvis-rh-caption">Hola, soy Jarvis</p>
     <p class="jarvis-rh-subtitle">¿Hay algo en lo que pueda ayudarte? Toca mi interfaz.</p>
