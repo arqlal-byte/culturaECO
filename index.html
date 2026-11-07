@@ -71,6 +71,13 @@
       .copy strong{font-size:16px}.copy span{font-size:12px}.arrow{font-size:25px}
       .admin-persona{min-height:94px;padding:14px;grid-template-columns:46px 1fr 18px;border-radius:17px}
     }
+    .jarvis-rh-access{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 18px 24px;background:#05090f;text-align:center;border-bottom:1px solid rgba(75,185,255,.22)}
+    .jarvis-rh-link{display:block;width:min(78vw,330px);border-radius:50%;outline-offset:7px;transition:transform .2s ease,filter .2s ease;filter:drop-shadow(0 0 18px rgba(0,165,255,.38))}
+    .jarvis-rh-link:hover{transform:scale(1.035);filter:drop-shadow(0 0 28px rgba(0,190,255,.7))}
+    .jarvis-rh-link:focus-visible{outline:3px solid #fff}
+    .jarvis-rh-link img{display:block;width:100%;height:auto;border-radius:50%}
+    .jarvis-rh-caption{font-size:13px;color:#9ddaff;letter-spacing:.1em;margin:10px 0 0;font-weight:700}
+    @media(max-width:640px){.jarvis-rh-access{padding:18px 14px 20px}.jarvis-rh-link{width:min(76vw,290px)}}
   </style>
 </head>
 <body>
@@ -85,6 +92,12 @@
     <small>ECOSISTEMA DEL MODELO CULTURAL</small>
     <h1>Herramientas Cultura ECO</h1>
     <p>Accede a las herramientas de administración, análisis y seguimiento del Modelo Cultural.</p>
+  </section>
+  <section class="jarvis-rh-access" aria-label="Acceso destacado a MonitorECO">
+    <a class="jarvis-rh-link" href="https://arqlal-byte.github.io/MonitorECO" aria-label="Abrir MonitorECO mediante Jarvis RH">
+      <img src="./Jarvis_RH.gif" alt="Jarvis RH, acceso animado a MonitorECO" loading="eager">
+    </a>
+    <p class="jarvis-rh-caption">MONITOREO ECO · JARVIS RH</p>
   </section>
   <main>
     <p class="section-title">Administración y seguimiento</p>
