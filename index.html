@@ -116,9 +116,58 @@
 @media(max-width:640px){
   .jarvis-training-note{right:-8px;bottom:10px;width:158px;padding:6px 7px;font-size:10px}
 }
+
+/* CULTURA ECO · Bienvenida animada de JARVIS (presentación visual únicamente). */
+.jarvis-intro[hidden]{display:none!important}
+.jarvis-intro{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;
+  overflow-y:auto;overscroll-behavior:contain;
+  padding:calc(18px + env(safe-area-inset-top)) 16px calc(18px + env(safe-area-inset-bottom));
+  background:radial-gradient(ellipse at 50% 34%,#12416a 0%,#07182c 43%,#02070f 87%);
+  color:#effaff;isolation:isolate}
+.jarvis-intro:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;
+  background:repeating-linear-gradient(0deg,transparent 0 7px,#83dcff 8px,transparent 9px)}
+.jarvis-intro-panel{position:relative;z-index:1;width:min(100%,510px);margin:auto;
+  display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;
+  padding:clamp(20px,5vw,34px) 20px 26px;border:1px solid #2c739caa;border-radius:25px;
+  background:linear-gradient(155deg,#071626f5,#04101ff5);
+  box-shadow:0 0 60px #087cb63b,inset 0 0 30px #0e75ad15;
+  animation:jarvisIntroAppear .75s ease-out both}
+.jarvis-intro-logo{display:block;width:min(75%,300px);height:auto;max-height:66px;object-fit:contain}
+.jarvis-intro-avatar{display:block;width:min(55vw,245px);height:auto;aspect-ratio:1;object-fit:contain;
+  border-radius:50%;background:#000;box-shadow:0 0 0 1px #39ccff85,0 0 34px #13bfff67;
+  animation:jarvisIntroGlow 2.3s ease-in-out infinite alternate}
+.jarvis-intro-eyebrow{margin:4px 0 0;color:#82dcff;font-size:11px;font-weight:800;letter-spacing:.18em}
+.jarvis-intro h2{margin:0;color:#f5fcff;font-size:clamp(25px,5.5vw,36px);line-height:1.15}
+.jarvis-intro p{margin:0;color:#c0dcef;font-size:clamp(14px,3.3vw,17px);line-height:1.5}
+.jarvis-intro-continue{margin-top:12px;min-width:182px;min-height:46px;padding:12px 26px;
+  border:1px solid #67d5ff;border-radius:13px;background:linear-gradient(120deg,#0a598d,#0876a8);
+  color:#fff;font:700 15px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  cursor:pointer;box-shadow:0 0 20px #139bda40}
+.jarvis-intro-continue:focus-visible{outline:3px solid #f4fbff;outline-offset:4px}
+.jarvis-intro-continue:hover{background:#0b80b5}
+.jarvis-intro.is-leaving{opacity:0;transition:opacity .32s ease}
+body.jarvis-intro-open{overflow:hidden}
+@keyframes jarvisIntroAppear{from{opacity:0;transform:translateY(15px) scale(.96)}
+  to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes jarvisIntroGlow{from{box-shadow:0 0 0 1px #39ccff85,0 0 22px #0b91ed55}
+  to{box-shadow:0 0 0 1px #67efff,0 0 48px #1bd1ff88}}
+@media(max-width:480px){.jarvis-intro-panel{gap:10px;padding:22px 16px 24px}
+  .jarvis-intro-avatar{width:min(53vw,215px)}}
+@media(prefers-reduced-motion:reduce){.jarvis-intro-panel,.jarvis-intro-avatar{animation:none}
+  .jarvis-intro.is-leaving{transition:none}}
 </style>
 </head>
 <body>
+<section class="jarvis-intro" id="jarvis-intro" role="dialog" aria-modal="true" aria-labelledby="jarvis-intro-title" hidden>
+  <div class="jarvis-intro-panel">
+    <img class="jarvis-intro-logo" src="./assets/eco-cocacola-oficial.png" alt="Logotipos oficiales de ECO y Coca-Cola">
+    <img class="jarvis-intro-avatar" src="./Animacio%CC%81n%20HUD%20futurista%20JARVIS%20ECO.gif" alt="JARVIS ECO animado" width="414" height="414" loading="eager">
+    <div class="jarvis-intro-eyebrow">ECOSISTEMA ECO</div>
+    <h2 id="jarvis-intro-title">Hola, soy JARVIS</h2>
+    <p>Bienvenido a Cultura ECO</p>
+    <button class="jarvis-intro-continue" id="jarvis-intro-continue" type="button">Continuar</button>
+  </div>
+</section>
 <div class="app">
   <header class="top">
     <div class="brand">
@@ -180,6 +229,46 @@
   </main>
   <footer>JUNTOS HACEMOS MÁS</footer>
 </div>
+<script>
+/* Entrada solo visual: una vez por sesión de pestaña y opción para omitir. */
+(function(){
+  'use strict';
+  var welcome=document.getElementById('jarvis-intro');
+  var continueButton=document.getElementById('jarvis-intro-continue');
+  var app=document.querySelector('body > .app');
+  if(!welcome||!continueButton)return;
+  var key='cultura-eco-jarvis-intro-v1',shown=false,preview=false;
+  try{shown=window.sessionStorage.getItem(key)==='1';}catch(e){}
+  try{preview=new URLSearchParams(window.location.search).get('bienvenida')==='1';}catch(e){}
+  if(shown&&!preview)return;
+  var previousFocus=document.activeElement;
+  var timeout=null,closed=false;
+  function closeWelcome(){
+    if(closed)return;
+    closed=true;
+    window.clearTimeout(timeout);
+    welcome.classList.add('is-leaving');
+    window.setTimeout(function(){
+      welcome.hidden=true;
+      welcome.classList.remove('is-leaving');
+      document.body.classList.remove('jarvis-intro-open');
+      if(app)app.removeAttribute('inert');
+      if(previousFocus&&previousFocus!==document.body&&typeof previousFocus.focus==='function')previousFocus.focus();
+    },350);
+  }
+  welcome.hidden=false;
+  document.body.classList.add('jarvis-intro-open');
+  if(app)app.setAttribute('inert','');
+  try{window.sessionStorage.setItem(key,'1');}catch(e){}
+  continueButton.addEventListener('click',closeWelcome);
+  welcome.addEventListener('keydown',function(event){
+    if(event.key==='Escape')closeWelcome();
+    if(event.key==='Tab'){event.preventDefault();continueButton.focus();}
+  });
+  continueButton.focus();
+  timeout=window.setTimeout(closeWelcome,4800);
+})();
+</script>
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
