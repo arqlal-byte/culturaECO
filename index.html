@@ -8,99 +8,82 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Cultura ECO">
   <title>Cultura ECO</title>
-  <link rel="manifest" href="./manifest.json?v=3">
-  <link rel="apple-touch-icon" href="./icon.png?v=3">
-  <link rel="icon" type="image/png" href="./icon.png?v=3">
+  <link rel="manifest" href="./manifest.json?v=4">
+  <link rel="apple-touch-icon" href="./icon.png?v=4">
+  <link rel="icon" type="image/png" href="./icon.png?v=4">
   <style>
     *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#090b0e;color:#f6f7f8}
+    html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#050a12;color:#f6f7f8}
     body{display:flex;justify-content:center}
-    .app{width:min(100%,920px);min-height:100vh;background:linear-gradient(180deg,#090b0e 0,#0b0d10 48%,#08090b 100%)}
+    .app{width:min(100%,920px);min-height:100vh;background:linear-gradient(180deg,#050a12 0,#0b1a2d 48%,#060c16 100%)}
     .top{padding:calc(30px + env(safe-area-inset-top)) 20px 14px;background:rgba(8,10,13,.96);border-bottom:1px solid rgba(255,255,255,.08)}
     .brand{display:flex;align-items:center;justify-content:space-between;gap:18px}
     .brand img{width:min(68%,360px);height:auto;display:block;filter:drop-shadow(0 4px 12px rgba(0,0,0,.25))}
-    .brand-badge{border:1px solid rgba(255,255,255,.16);background:#191c21;color:#fff;border-radius:999px;padding:7px 11px;font-size:10px;font-weight:700;letter-spacing:.10em;white-space:nowrap}
-    .hero{min-height:250px;padding:40px 24px 32px;color:#fff;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(5,7,9,.58) 0%,rgba(5,7,9,.30) 48%,rgba(5,7,9,.12) 100%),url('./cultura-eco-hero.jpg') center center/cover no-repeat}
-    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.14));pointer-events:none}
-    .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(180deg,transparent,rgba(8,10,12,.52));pointer-events:none}
-    .hero small,.hero h1,.hero p{position:relative;z-index:2}
-    .hero small{display:block;font-size:10px;font-weight:700;letter-spacing:.18em;color:#ff667c;margin-bottom:9px}
-    .hero h1{margin:0;font-size:clamp(31px,5vw,43px);line-height:1.03;letter-spacing:-.025em}
-    .hero p{margin:11px 0 0;max-width:590px;font-size:15px;line-height:1.45;color:#c8ccd1}
+    .brand-badge{border:1px solid rgba(255,255,255,.16);background:#10253e;color:#fff;border-radius:999px;padding:7px 11px;font-size:10px;font-weight:700;letter-spacing:.10em;white-space:nowrap}
     main{padding:22px 18px 32px}
-    .section-title{margin:0 0 14px;font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:#8f959d;font-weight:700}
+    .section-title{margin:0 0 14px;font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:#90b9d3;font-weight:700}
     .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .card{min-height:126px;background:linear-gradient(145deg,#292d34,#20242a);border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:18px;text-decoration:none;color:#fff;display:grid;grid-template-columns:52px 1fr 20px;align-items:center;gap:13px;box-shadow:0 9px 22px rgba(0,0,0,.18);transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease}
-    .card:hover{box-shadow:0 14px 30px rgba(0,0,0,.28);border-color:rgba(255,45,75,.30)}
+    .card{min-height:126px;background:linear-gradient(145deg,#172f49,#0d1c30);border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:18px;text-decoration:none;color:#fff;display:grid;grid-template-columns:52px 1fr 20px;align-items:center;gap:13px;box-shadow:0 9px 22px rgba(0,0,0,.18);transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease}
+    .card:hover{box-shadow:0 14px 30px rgba(0,0,0,.28);border-color:rgba(65,204,255,.7)}
     .card:active{transform:scale(.985)}
-    .ico{width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,#e60023,#a9001a);color:#fff;display:grid;place-items:center;font-size:23px;font-weight:700;box-shadow:0 7px 18px rgba(230,0,35,.20)}
+    .ico{width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,#0879b8,#11436e);color:#fff;display:grid;place-items:center;font-size:23px;font-weight:700;box-shadow:0 7px 18px rgba(0,153,255,.19)}
     .copy{display:flex;flex-direction:column;gap:5px}
     .copy strong{font-size:17px;line-height:1.12}
     .copy span{font-size:13px;line-height:1.3;color:#aeb3ba}
-    .arrow{font-size:28px;color:#777e87;font-weight:300}
-    .admin-persona{display:grid;grid-template-columns:52px 1fr 20px;align-items:center;gap:13px;margin-top:12px;min-height:116px;border-radius:20px;padding:18px;text-decoration:none;background:linear-gradient(135deg,#3a0a12,#24272d 58%,#1e2126);border:1px solid rgba(230,0,35,.42);color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.24);transition:transform .14s ease,box-shadow .14s ease}
+    .arrow{font-size:28px;color:#79cfff;font-weight:300}
+    .admin-persona{display:grid;grid-template-columns:52px 1fr 20px;align-items:center;gap:13px;margin-top:12px;min-height:116px;border-radius:20px;padding:18px;text-decoration:none;background:linear-gradient(135deg,#16416a,#10253f 58%,#0d1c30);border:1px solid rgba(49,186,255,.52);color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.24);transition:transform .14s ease,box-shadow .14s ease}
     .admin-persona:active{transform:scale(.985)}
     .admin-persona:hover{box-shadow:0 14px 32px rgba(0,0,0,.32)}
-    .admin-persona .ico{background:#e60023;color:#fff}
+    .admin-persona .ico{background:#0879b8;color:#fff}
     .admin-persona .copy span{color:#b9bdc3}
     .admin-persona .arrow{color:#fff;opacity:.55}
     footer{padding:0 18px calc(22px + env(safe-area-inset-bottom));text-align:center;color:#666c74;font-size:10px;letter-spacing:.24em}
     /* Grupos de accesos del concentrador ECO — 2026-10-27 */
     .featured-access{margin-top:12px}
-    .featured-access .card-feature{width:100%;min-height:110px;background:linear-gradient(115deg,#5b0e1c,#282b31 75%);border-color:rgba(230,0,35,.48)}
+    .featured-access .card-feature{width:100%;min-height:110px;background:linear-gradient(115deg,#16416a,#10253f 75%);border-color:rgba(49,186,255,.52)}
     .access-group{border-top:1px solid rgba(255,255,255,.19);margin-top:32px;padding-top:23px}
     .access-group .section-title{font-size:12px;margin-bottom:15px}
-    .group-evaluations .section-title{color:#9cc7f4}
-    .group-personal .section-title{color:#9dd9b5}
-    .group-support .section-title{color:#d9beef}
     .access-group .card{min-height:116px}
-    .card-eval{background:linear-gradient(145deg,#21496e,#172d46);border-color:rgba(123,183,238,.28)}
-    .card-eval .ico{background:linear-gradient(145deg,#286ca5,#164572);box-shadow:0 7px 18px rgba(28,87,142,.24)}
-    .card-personal{background:linear-gradient(145deg,#234d3e,#19342c);border-color:rgba(131,203,163,.25)}
-    .card-personal .ico{background:linear-gradient(145deg,#32835b,#17623c);box-shadow:0 7px 18px rgba(25,103,66,.24)}
-    .card-support{background:linear-gradient(145deg,#46324f,#2d263c);border-color:rgba(194,158,222,.27)}
-    .card-support .ico{background:linear-gradient(145deg,#83569c,#56306f);box-shadow:0 7px 18px rgba(92,55,121,.24)}
     .card:focus-visible{outline:3px solid #fff;outline-offset:3px}
     @media(max-width:640px){.featured-access .card-feature{min-height:98px}.access-group{margin-top:26px;padding-top:20px}.access-group .card{min-height:94px}}
     @media(max-width:640px){
       .top{padding-left:16px;padding-right:16px;padding-top:calc(30px + env(safe-area-inset-top))}.brand img{width:min(66%,270px)}.brand-badge{font-size:9px;padding:6px 9px}
-      .hero{min-height:225px;padding:34px 18px 28px;background-position:58% center}.hero h1{font-size:32px}.hero p{font-size:14px;max-width:330px}
       main{padding:18px 14px 28px}.grid{grid-template-columns:1fr;gap:10px}
       .card{min-height:94px;padding:14px;grid-template-columns:46px 1fr 18px;border-radius:17px}
       .ico{width:44px;height:44px;border-radius:13px;font-size:21px}
       .copy strong{font-size:16px}.copy span{font-size:12px}.arrow{font-size:25px}
       .admin-persona{min-height:94px;padding:14px;grid-template-columns:46px 1fr 18px;border-radius:17px}
     }
-    .jarvis-rh-access{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 18px 24px;background:#05090f;text-align:center;border-bottom:1px solid rgba(75,185,255,.22)}
-    .jarvis-rh-link{display:block;width:min(78vw,330px);border-radius:50%;outline-offset:7px;transition:transform .2s ease,filter .2s ease;filter:drop-shadow(0 0 18px rgba(0,165,255,.38))}
-    .jarvis-rh-link:hover{transform:scale(1.035);filter:drop-shadow(0 0 28px rgba(0,190,255,.7))}
-    .jarvis-rh-link:focus-visible{outline:3px solid #fff}
-    .jarvis-rh-link img{display:block;width:100%;height:auto;border-radius:50%}
-    .jarvis-rh-caption{font-size:13px;color:#9ddaff;letter-spacing:.1em;margin:10px 0 0;font-weight:700}
-    @media(max-width:640px){.jarvis-rh-access{padding:18px 14px 20px}.jarvis-rh-link{width:min(76vw,290px)}}
+    .jarvis-eco-access{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 18px 24px;background:#05090f;text-align:center;border-bottom:1px solid rgba(75,185,255,.22)}
+    .jarvis-eco-link{display:block;width:min(78vw,330px);border-radius:50%;outline-offset:7px;transition:transform .2s ease,filter .2s ease;filter:drop-shadow(0 0 18px rgba(0,165,255,.38))}
+    .jarvis-eco-link:hover{transform:scale(1.035);filter:drop-shadow(0 0 28px rgba(0,190,255,.7))}
+    .jarvis-eco-link:focus-visible{outline:3px solid #fff}
+    .jarvis-eco-link img{display:block;width:100%;height:auto;border-radius:50%}
+    .jarvis-eco-caption{font-size:13px;color:#9ddaff;letter-spacing:.1em;margin:10px 0 0;font-weight:700}
+    @media(max-width:640px){.jarvis-eco-access{padding:18px 14px 20px}.jarvis-eco-link{width:min(76vw,290px)}}
 
-    /* Rediseño azul JARVIS RH: conserva enlaces, logotipo oficial y estructura funcional. */
+    /* Diseño vigente JARVIS ECO: enlaces, logotipo oficial y estructura funcional. */
     html,body{background:#050a12;color:#f1f8ff}
     .app{background:linear-gradient(180deg,#050a12 0%,#0b1a2d 48%,#060c16 100%)}
     .top{background:rgba(5,13,25,.98);border-bottom:1px solid rgba(39,177,255,.24)}
     .brand-badge{background:#10253e;border-color:rgba(64,190,255,.42);color:#a6e6ff}
-    .jarvis-rh-access{background:radial-gradient(ellipse at 50% 44%,#133858 0%,#091b30 45%,#060e1c 85%);border-bottom:1px solid rgba(56,181,255,.32);padding:24px 18px 28px}
-    .jarvis-rh-link{width:min(78vw,350px)}
-    .jarvis-rh-caption{color:#77d8ff;font-size:14px}
-    .jarvis-rh-subtitle{max-width:560px;margin:12px 0 0;color:#b4c9d9;font-size:14px;line-height:1.5}
+    .jarvis-eco-access{background:radial-gradient(ellipse at 50% 44%,#133858 0%,#091b30 45%,#060e1c 85%);border-bottom:1px solid rgba(56,181,255,.32);padding:24px 18px 28px}
+    .jarvis-eco-link{width:min(78vw,350px)}
+    .jarvis-eco-caption{color:#77d8ff;font-size:14px}
+    .jarvis-eco-subtitle{max-width:560px;margin:12px 0 0;color:#b4c9d9;font-size:14px;line-height:1.5}
     .section-title{color:#90b9d3}
     .access-group{border-top-color:rgba(83,178,235,.23)}
-    .group-evaluations .section-title,.group-personal .section-title,.group-support .section-title{color:#8edbff}
-    .card,.card-eval,.card-personal,.card-support{background:linear-gradient(145deg,#172f49,#0d1c30);border-color:rgba(90,185,244,.28);box-shadow:0 9px 24px rgba(0,0,0,.24)}
+    .group-evaluations .section-title,.group-personal .section-title,
+    .card,.card-eval,.card-personal,
     .card:hover{border-color:rgba(65,204,255,.7);box-shadow:0 12px 30px rgba(0,145,255,.15)}
-    .ico,.card-eval .ico,.card-personal .ico,.card-support .ico{background:linear-gradient(145deg,#0879b8,#11436e);box-shadow:0 7px 18px rgba(0,153,255,.19)}
+    .ico,.card-eval .ico,.card-personal .ico,
     .copy span{color:#afc3d5}
     .arrow{color:#79cfff}
     .featured-access .card-feature,.admin-persona{background:linear-gradient(115deg,#16416a,#10253f 75%);border-color:rgba(49,186,255,.52)}
     .admin-persona .ico{background:#0879b8}
     footer{color:#8daabe}
-    @media(max-width:640px){.jarvis-rh-access{padding:18px 14px 24px}.jarvis-rh-link{width:min(78vw,310px)}.jarvis-rh-subtitle{font-size:13px}}
-  .jarvis-rh-link{position:relative}
+    @media(max-width:640px){.jarvis-eco-access{padding:18px 14px 24px}.jarvis-eco-link{width:min(78vw,310px)}.jarvis-eco-subtitle{font-size:13px}}
+  .jarvis-eco-link{position:relative}
 
 /* Etiqueta sutil de JARVIS ECO: no modifica ni cubre el GIF original. */
 .jarvis-training-note{
@@ -175,13 +158,13 @@ body.jarvis-intro-open{overflow:hidden}
       <span class="brand-badge">CULTURA ECO</span>
     </div>
   </header>
-  <section class="jarvis-rh-access" aria-label="Acceso destacado a MonitorECO">
-    <a class="jarvis-rh-link" href="https://script.google.com/macros/s/AKfycbwTkQW0NViOl-hbyfarXr3AxT55TtzCN8tGaaAVAQHduRBY3gVcSPWimXtnQWDe20tSJQ/exec" aria-label="Abrir MonitorECO mediante Jarvis RH">
-      <img src="./Animacio%CC%81n%20HUD%20futurista%20JARVIS%20ECO.gif" alt="Jarvis RH, acceso animado a MonitorECO" loading="eager">
+  <section class="jarvis-eco-access" aria-label="Acceso destacado a MonitorECO">
+    <a class="jarvis-eco-link" href="https://script.google.com/macros/s/AKfycbwTkQW0NViOl-hbyfarXr3AxT55TtzCN8tGaaAVAQHduRBY3gVcSPWimXtnQWDe20tSJQ/exec" aria-label="Abrir MonitorECO mediante Jarvis ECO">
+      <img src="./Animacio%CC%81n%20HUD%20futurista%20JARVIS%20ECO.gif" alt="Jarvis ECO, acceso animado a MonitorECO" loading="eager">
       <span class="jarvis-training-note">Tenme paciencia,<span>estoy en capacitación</span></span>
     </a>
-    <p class="jarvis-rh-caption">Hola, soy Jarvis</p>
-    <p class="jarvis-rh-subtitle">¿Hay algo en lo que pueda ayudarte? Toca mi interfaz.</p>
+    <p class="jarvis-eco-caption">Hola, soy Jarvis</p>
+    <p class="jarvis-eco-subtitle">¿Hay algo en lo que pueda ayudarte? Toca mi interfaz.</p>
   </section>
   <main>
     <p class="section-title">Administración y seguimiento</p>
@@ -271,7 +254,12 @@ body.jarvis-intro-open{overflow:hidden}
 </script>
 <script>
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+    window.addEventListener('load', async () => {
+      try {
+        const registration = await navigator.serviceWorker.register('./sw.js?v=4', { updateViaCache: 'none' });
+        await registration.update();
+      } catch (error) { /* El portal continúa disponible en línea sin PWA. */ }
+    });
   }
 </script>
 </body>

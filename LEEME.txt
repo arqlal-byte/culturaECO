@@ -1,7 +1,24 @@
-CULTURA ECO — PWA
+CULTURA ECO — PWA · interfaz azul JARVIS ECO
+Actualización: 2026-11-08
 
-Este paquete conserva la interfaz del portal existente y cambia su identidad a Cultura ECO.
-Sube estos archivos a la raíz del repositorio destinado a Cultura ECO en GitHub Pages.
-El icono instalado será Cultura ECO (azul).
+Este repositorio publica el portal Cultura ECO de Embotelladora de Colima.
+El diseño vigente es el azul de JARVIS ECO. Los accesos existentes y el
+logotipo corporativo oficial se conservan en index.html.
 
-La aplicación Persona ECO es independiente y ya no aparece como acceso dentro de Cultura ECO.
+Mantenimiento de caché:
+- La versión del manifiesto, icono y service worker es v4.
+- El service worker elimina las cachés antiguas de Cultura ECO al activarse.
+- La página principal siempre intenta descargarse de la red; nunca vuelve
+  a mostrar un HTML antiguo desde la caché si no hay conexión.
+- Sin conexión se muestra un aviso, no una interfaz desactualizada.
+
+Respaldo anterior a esta limpieza:
+Rama GitHub: respaldo-culturaECO-2026-11-08-previo-limpieza
+Commit de origen: 3a91ddd5ad564e4c97b5cff7f4bc84d6abacd619
+Los recursos visuales retirados siguen disponibles en esa rama.
+
+El portal no guarda información de evaluaciones. Los enlaces a otras
+aplicaciones del Ecosistema ECO son independientes y no fueron modificados.
+
+Pendiente de validación operativa: confirmar desde teléfono y computadora
+que la interfaz actualizada se visualiza y funciona correctamente.
