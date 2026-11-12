@@ -24,6 +24,20 @@ RESPALDO
 - Rama operativa: main.
 - Reversión: recuperar el commit de la rama de respaldo tras validación.
 
+ACTUALIZACIÓN VISUAL 2026-11-12 — MODELO CULTURAL
+- Asistente ECO aparece en la parte superior del módulo, como pequeño
+  botón con GIF animado. El GIF se basó en icon.svg del repositorio
+  original asistenteCulturaECO y no sustituye el logotipo corporativo.
+- Accesos principales, en orden: Evaluación 360, Centro de Administración,
+  Mi Persona ECO, Familia ECO.
+- Accesos secundarios conservados: Evaluación de Líderes 2027,
+  Autoevaluación, Administración de Líderes, Altas Rápidas y Registro
+  de Asistencia. Los 13 enlaces externos anteriores se conservan.
+- La página principal NEXO + ocho módulos no fue modificada.
+- Respaldo previo a este ajuste:
+  respaldo-culturaECO-2026-11-12-previo-asistente-superior
+- Confirmación operativa del usuario aún pendiente.
+
 PRUEBAS PENDIENTES
 - Comprobar sitio de GitHub Pages publicado (no basta que el repositorio guarde).
 - Probar inicio y navegación Modelo Cultural / regreso en iPhone, Android
