@@ -1,24 +1,31 @@
-CULTURA ECO — PWA · interfaz azul JARVIS ECO
-Actualización: 2026-11-08
+ECOSISTEMA DE CAPITAL HUMANO ECO — PORTAL / PWA
+Actualización: 2026-11-12
+Estado: prototipo funcional pendiente de validación operativa.
 
-Este repositorio publica el portal Cultura ECO de Embotelladora de Colima.
-El diseño vigente es el azul de JARVIS ECO. Los accesos existentes y el
-logotipo corporativo oficial se conservan en index.html.
+NAVEGACIÓN
+- Pantalla principal: NEXO ECO (acceso existente a MonitorECO), Dashboard Ejecutivo y
+  Seguimiento de actividades como herramientas generales.
+- Ocho módulos visibles. Modelo Cultural es el único módulo habilitado.
+- Los otros siete módulos indican «Próximamente» y no tienen enlaces operativos.
+- Modelo Cultural abre dentro del mismo index.html una segunda pantalla que
+  concentra los diez accesos existentes de su sección y permite regresar.
+- No se alteraron enlaces a otras aplicaciones ni código Apps Script o Sheets.
 
-Mantenimiento de caché:
-- La versión del manifiesto, icono y service worker es v4.
-- El service worker elimina las cachés antiguas de Cultura ECO al activarse.
-- La página principal siempre intenta descargarse de la red; nunca vuelve
-  a mostrar un HTML antiguo desde la caché si no hay conexión.
-- Sin conexión se muestra un aviso, no una interfaz desactualizada.
+IMAGEN Y PWA
+- Se conservan el logotipo oficial en assets/eco-cocacola-oficial.png, la
+  animación original NEXO ECO y el icono icon.png.
+- El manifiesto se presenta como Ecosistema ECO; versión de recursos v5.
+- El service worker conserva estrategia de HTML en red y recursos visuales
+  en caché, con aviso sin conexión.
+- Se mantiene la bienvenida NEXO una vez por sesión.
 
-Respaldo anterior a esta limpieza:
-Rama GitHub: respaldo-culturaECO-2026-11-08-previo-limpieza
-Commit de origen: 3a91ddd5ad564e4c97b5cff7f4bc84d6abacd619
-Los recursos visuales retirados siguen disponibles en esa rama.
+RESPALDO
+- Rama GitHub previa: respaldo-culturaECO-2026-11-12-previo-ecosistemaCH
+- Rama operativa: main.
+- Reversión: recuperar el commit de la rama de respaldo tras validación.
 
-El portal no guarda información de evaluaciones. Los enlaces a otras
-aplicaciones del Ecosistema ECO son independientes y no fueron modificados.
-
-Pendiente de validación operativa: confirmar desde teléfono y computadora
-que la interfaz actualizada se visualiza y funciona correctamente.
+PRUEBAS PENDIENTES
+- Comprobar sitio de GitHub Pages publicado (no basta que el repositorio guarde).
+- Probar inicio y navegación Modelo Cultural / regreso en iPhone, Android
+  y computadora; botón Atrás; accesos y PWA instalada.
+- Validar operativamente con el responsable antes de marcar estable.
