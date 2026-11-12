@@ -43,3 +43,13 @@ PRUEBAS PENDIENTES
 - Probar inicio y navegación Modelo Cultural / regreso en iPhone, Android
   y computadora; botón Atrás; accesos y PWA instalada.
 - Validar operativamente con el responsable antes de marcar estable.
+
+
+ACTUALIZACIÓN 2026-11-12 — SUBPORTAL NOM-035
+- NOM-035 habilitado desde el inicio (#nom-035), con formato similar a Modelo Cultural.
+- Asistente NOM-035 es el único acceso activo; utiliza exactamente la URL de Apps Script compartida por el usuario.
+- Dashboard, Programa de actividades y Evaluación: tarjetas visibles, deshabilitadas y sin enlace («Próximamente»).
+- Conservados todos los accesos previos, estructura del módulo Modelo Cultural, NEXO, identidad y PWA.
+- Archivos afectados: index.html y LEEME.txt; sin modificaciones en Apps Script, Sheets ni despliegues de aplicaciones.
+- Respaldo recuperable: respaldo-culturaECO-2026-11-12-previo-NOM035.
+- Pendiente validar GitHub Pages, enlaces desde sesión corporativa, regreso e instalación móvil.
