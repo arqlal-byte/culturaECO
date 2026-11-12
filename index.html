@@ -197,6 +197,15 @@ body.jarvis-intro-open{overflow:hidden}
       .assistant-top-link span{font-size:11px}
     }
 
+
+    /* Módulo NOM-035: el asistente está disponible; herramientas en preparación. */
+    .nom035-tools .grid{margin-top:12px}
+    .nom-disabled-card,.nom-disabled-card:hover{cursor:default;opacity:.72;background:linear-gradient(145deg,#112438,#0a1929);border-color:#385068;box-shadow:none;transform:none}
+    .nom-disabled-card .ico{background:#203a52;color:#a6bbca;box-shadow:none}
+    .nom-disabled-card .copy span{color:#aec0ce}
+    .nom-disabled-card .arrow{display:none}
+    .nom035-view .assistant-top-link{max-width:125px}
+    .nom035-view .assistant-top-link span{overflow-wrap:anywhere}
 </style>
 </head>
 <body>
@@ -245,7 +254,7 @@ body.jarvis-intro-open{overflow:hidden}
         <h2 class="section-title" id="modules-title">Módulos del Ecosistema</h2>
         <div class="grid module-grid">
           <a class="card module-card module-card-primary" href="#modelo-cultural" aria-label="Abrir módulo Modelo Cultural"><div class="ico" aria-hidden="true">♧</div><div class="copy"><strong>Modelo Cultural</strong><span>Acceder a las aplicaciones disponibles</span></div><div class="arrow" aria-hidden="true">›</div></a>
-<div class="card module-card module-card-inactive" aria-disabled="true"><div class="ico" aria-hidden="true">◉</div><div class="copy"><strong>NOM-035</strong><span>Próximamente</span></div><div class="arrow" aria-hidden="true"></div></div>
+<a class="card module-card module-card-primary" href="#nom-035" aria-label="Abrir módulo NOM-035"><div class="ico" aria-hidden="true">◉</div><div class="copy"><strong>NOM-035</strong><span>Asistente disponible</span></div><div class="arrow" aria-hidden="true">›</div></a>
 <div class="card module-card module-card-inactive" aria-disabled="true"><div class="ico" aria-hidden="true">◌</div><div class="copy"><strong>Clima Laboral</strong><span>Próximamente</span></div><div class="arrow" aria-hidden="true"></div></div>
 <div class="card module-card module-card-inactive" aria-disabled="true"><div class="ico" aria-hidden="true">▥</div><div class="copy"><strong>Indicadores</strong><span>Próximamente</span></div><div class="arrow" aria-hidden="true"></div></div>
 <div class="card module-card module-card-inactive" aria-disabled="true"><div class="ico" aria-hidden="true">▤</div><div class="copy"><strong>Compensaciones</strong><span>Próximamente</span></div><div class="arrow" aria-hidden="true"></div></div>
@@ -297,6 +306,43 @@ body.jarvis-intro-open{overflow:hidden}
       </section>
     </main>
   </section>
+
+  <section id="nom-035" class="model-view nom035-view" aria-labelledby="nom-title" hidden>
+    <main class="model-main">
+      <a class="model-back" href="#inicio" aria-label="Regresar al Ecosistema de Capital Humano">‹ Regresar al Ecosistema</a>
+      <div class="model-heading model-heading-assistant">
+        <div class="model-heading-copy">
+          <p class="model-kicker">Módulo 02 · NOM-035</p>
+          <h1 id="nom-title">NOM-035</h1>
+          <p>Prevención de factores de riesgo psicosocial y promoción de un entorno organizacional favorable.</p>
+        </div>
+        <a class="assistant-top-link" href="https://script.google.com/a/macros/gocsa.com.mx/s/AKfycbxP0spevemtdXfp-9UsowXXT4TapaL8xg0ML-iZyG47plNNDV1KSPjwIaai8mvNl81j/exec" aria-label="Abrir Asistente NOM-035">
+          <img class="assistant-top-gif" src="./Robot%20ECO%20saludando%20animado.gif?v=6" alt="" width="70" height="70" loading="eager">
+          <span>Asistente NOM-035</span>
+        </a>
+      </div>
+      <section class="nom035-tools" aria-labelledby="nom-tools-title">
+        <h2 class="section-title" id="nom-tools-title">Herramientas NOM-035</h2>
+        <div class="grid">
+          <div class="card nom-disabled-card" aria-disabled="true">
+            <div class="ico" aria-hidden="true">▥</div>
+            <div class="copy"><strong>Dashboard</strong><span>Próximamente</span></div>
+            <div class="arrow" aria-hidden="true"></div>
+          </div>
+          <div class="card nom-disabled-card" aria-disabled="true">
+            <div class="ico" aria-hidden="true">▤</div>
+            <div class="copy"><strong>Programa de actividades</strong><span>Próximamente</span></div>
+            <div class="arrow" aria-hidden="true"></div>
+          </div>
+          <div class="card nom-disabled-card" aria-disabled="true">
+            <div class="ico" aria-hidden="true">◉</div>
+            <div class="copy"><strong>Evaluación</strong><span>Próximamente</span></div>
+            <div class="arrow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </section>
   <footer>JUNTOS HACEMOS MÁS</footer>
 </div>
 <script>
@@ -341,17 +387,21 @@ body.jarvis-intro-open{overflow:hidden}
 </script>
 
 <script>
-/* Navegación local entre el portal general y el módulo Modelo Cultural. */
+/* Navegación local entre inicio, Modelo Cultural y NOM-035. */
 (function(){
   'use strict';
   const home=document.getElementById('inicio');
   const model=document.getElementById('modelo-cultural');
-  if(!home||!model)return;
+  const nom=document.getElementById('nom-035');
+  if(!home||!model||!nom)return;
   function updateView(){
-    const inModel=window.location.hash==='#modelo-cultural';
-    home.hidden=inModel;
+    const hash=window.location.hash;
+    const inModel=hash==='#modelo-cultural';
+    const inNom=hash==='#nom-035';
+    home.hidden=inModel||inNom;
     model.hidden=!inModel;
-    document.title=inModel?'Modelo Cultural | Ecosistema ECO':'Ecosistema de Capital Humano | ECO';
+    nom.hidden=!inNom;
+    document.title=inModel?'Modelo Cultural | Ecosistema ECO':inNom?'NOM-035 | Ecosistema ECO':'Ecosistema de Capital Humano | ECO';
     window.scrollTo(0,0);
   }
   window.addEventListener('hashchange',updateView);
