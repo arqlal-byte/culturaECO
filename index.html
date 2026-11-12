@@ -178,6 +178,25 @@ body.jarvis-intro-open{overflow:hidden}
       .model-heading{padding:18px}
     }
 
+
+    /* Asistente ECO animado y orden de accesos — 2026-11-12 */
+    .model-heading-assistant{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .model-heading-copy{min-width:0;flex:1}
+    .assistant-top-link{flex:0 0 auto;min-width:104px;min-height:110px;display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;padding:9px 8px;border-radius:17px;text-decoration:none;background:linear-gradient(140deg,#0b4261,#06263d);border:1px solid rgba(91,208,251,.7);box-shadow:0 0 19px rgba(0,170,231,.19);color:#d9f4ff;transition:background .16s ease,transform .16s ease}
+    .assistant-top-link:hover{background:#125578;transform:translateY(-2px)}
+    .assistant-top-link:focus-visible{outline:3px solid #fff;outline-offset:3px}
+    .assistant-top-gif{display:block;width:70px;height:70px;object-fit:contain;border-radius:14px}
+    .assistant-top-link span{font-size:12px;font-weight:700;text-align:center;line-height:1.2}
+    .model-primary .grid{margin-top:12px}
+    .model-primary .card-feature{background:linear-gradient(120deg,#16416a,#10253f 80%);border-color:rgba(49,186,255,.52)}
+    .model-secondary{margin-top:30px}
+    @media(max-width:640px){
+      .model-heading-assistant{gap:10px;padding:15px}
+      .assistant-top-link{min-width:88px;min-height:96px;padding:8px 6px}
+      .assistant-top-gif{width:61px;height:61px}
+      .assistant-top-link span{font-size:11px}
+    }
+
 </style>
 </head>
 <body>
@@ -240,47 +259,42 @@ body.jarvis-intro-open{overflow:hidden}
   <section id="modelo-cultural" class="model-view" aria-labelledby="model-title" hidden>
     <main class="model-main">
       <a class="model-back" href="#inicio" aria-label="Regresar al Ecosistema de Capital Humano">‹ Regresar al Ecosistema</a>
-      <div class="model-heading">
-        <p class="model-kicker">Módulo 01 · Modelo Cultural</p>
-        <h1 id="model-title">Modelo Cultural ECO</h1>
-        <p>Evaluación, desarrollo y administración del Modelo Cultural ECO.</p>
+      <div class="model-heading model-heading-assistant">
+        <div class="model-heading-copy">
+          <p class="model-kicker">Módulo 01 · Modelo Cultural</p>
+          <h1 id="model-title">Modelo Cultural ECO</h1>
+          <p>Evaluación, desarrollo y administración del Modelo Cultural ECO.</p>
+        </div>
+        <a class="assistant-top-link" href="https://arqlal-byte.github.io/asistenteCulturaECO/" aria-label="Abrir Asistente ECO">
+          <img class="assistant-top-gif" src="./assets/asistente-eco-bot-mini.gif" alt="" width="70" height="70" loading="eager">
+          <span>Asistente ECO</span>
+        </a>
       </div>
-      <section class="model-admin" aria-labelledby="admin-title">
-        <h2 class="section-title" id="admin-title">Administración y seguimiento</h2>
-        <div class="grid"><a class="card" href="https://script.google.com/macros/s/AKfycbyV3v46Z4AfR2n4jxIPsKSeniYSd-csabPLtgfl5yxBmUXdp7J6Sm_EAWNo4mBEmxn3/exec" aria-label="Administración de Líderes">
-        <div class="ico">◎</div><div class="copy"><strong>Administración de Líderes</strong><span>Gestiona la información de tu equipo.</span></div><div class="arrow">›</div>
-      </a>
-<a class="card" href="https://script.google.com/macros/s/AKfycbxrOUfT5NgbT91Gj0nkFRH2OUYhfzl80qW0lD4sLlbg0EugmYTsBp9OhnuKo2jxsc02Lw/exec" aria-label="Altas Rápidas">
-        <div class="ico">＋</div><div class="copy"><strong>Altas Rápidas</strong><span>Registro de colaboradores y asignaciones extraordinarias.</span></div><div class="arrow">›</div>
-      </a></div>
-        <section class="featured-access" aria-label="Acceso principal de administración">
-      <a class="card card-feature" href="https://arqlal-byte.github.io/centro-administracion-eco/" aria-label="Centro de Administración">
+      <section class="model-primary" aria-labelledby="primary-title">
+        <h2 class="section-title" id="primary-title">Accesos principales</h2>
+        <div class="grid">
+          <a class="card card-eval" href="https://script.google.com/macros/s/AKfycbyYfau3oEdwrb4eoPjep-LbJijamSxF78QTVdj9jiNhP0DeMRJWCwb5zkKhMhMz8H7I/exec?page=admin" aria-label="Evaluación 360"><div class="ico">◉</div><div class="copy"><strong>Evaluación 360</strong><span>Evaluación de líderes desde distintas perspectivas.</span></div><div class="arrow">›</div></a>
+          <a class="card card-feature" href="https://arqlal-byte.github.io/centro-administracion-eco/" aria-label="Centro de Administración">
         <div class="ico">▦</div><div class="copy"><strong>Centro de Administración</strong><span>Acceso a las herramientas de administración ECO.</span></div><div class="arrow">›</div>
       </a>
-    </section>
+          <a class="card card-personal" href="https://arqlal-byte.github.io/mi-persona-eco/" aria-label="Mi Persona ECO"><div class="ico">♙</div><div class="copy"><strong>Mi Persona ECO</strong><span>Consulta tu perfil y da seguimiento a tu desarrollo.</span></div><div class="arrow">›</div></a>
+          <a class="card card-personal" href="https://arqlal-byte.github.io/familiaECO/" aria-label="Familia ECO"><div class="ico">♡</div><div class="copy"><strong>Familia ECO</strong><span>Accede a las actividades para la familia.</span></div><div class="arrow">›</div></a>
+        </div>
       </section>
-      <section class="access-group group-evaluations" aria-labelledby="evaluaciones-title">
-      <h2 class="section-title" id="evaluaciones-title">Evaluaciones del Modelo Cultural</h2>
-      <div class="grid">
-        <a class="card card-eval" href="https://script.google.com/macros/s/AKfycbyYfau3oEdwrb4eoPjep-LbJijamSxF78QTVdj9jiNhP0DeMRJWCwb5zkKhMhMz8H7I/exec?page=admin" aria-label="Evaluación 360"><div class="ico">◉</div><div class="copy"><strong>Evaluación 360</strong><span>Evaluación de líderes desde distintas perspectivas.</span></div><div class="arrow">›</div></a>
-        <a class="card card-eval" href="https://script.google.com/macros/s/AKfycbwVc9C_FjO3FIoExhQmbmTb1W9lG9tEXowp3uJwD5T7BTdXPAdglYf_6cBlsoIPpgHW6w/exec" aria-label="Evaluación de Líderes 2027"><div class="ico">✓</div><div class="copy"><strong>Evaluación de Líderes 2027</strong><span>Accede a la evaluación del ciclo 2027.</span></div><div class="arrow">›</div></a>
-        <a class="card card-eval" href="https://script.google.com/macros/s/AKfycbyOpnMMsxWS2IUGZv-C00_dCzVudIj8ALtA3SkKn6IspXj98ALnMX0O-HfGWa2Q9HOY/exec" aria-label="Autoevaluación"><div class="ico">◎</div><div class="copy"><strong>Autoevaluación</strong><span>Consulta y responde tu autoevaluación ECO.</span></div><div class="arrow">›</div></a>
-      </div>
-    </section>
-      <section class="access-group group-personal" aria-labelledby="personal-title">
-      <h2 class="section-title" id="personal-title">Desarrollo personal y familiar</h2>
-      <div class="grid">
-        <a class="card card-personal" href="https://arqlal-byte.github.io/mi-persona-eco/" aria-label="Mi Persona ECO"><div class="ico">♙</div><div class="copy"><strong>Mi Persona ECO</strong><span>Consulta tu perfil y da seguimiento a tu desarrollo.</span></div><div class="arrow">›</div></a>
-        <a class="card card-personal" href="https://arqlal-byte.github.io/familiaECO/" aria-label="Familia ECO"><div class="ico">♡</div><div class="copy"><strong>Familia ECO</strong><span>Accede a las actividades para la familia.</span></div><div class="arrow">›</div></a>
-      </div>
-    </section>
-      <section class="access-group group-support" aria-labelledby="apoyo-title">
-      <h2 class="section-title" id="apoyo-title">Asistencia y herramientas de apoyo</h2>
-      <div class="grid">
-        <a class="card card-support" href="https://arqlal-byte.github.io/asistenteCulturaECO/" aria-label="Asistente ECO"><div class="ico">✦</div><div class="copy"><strong>Asistente ECO</strong><span>Consulta el asistente del Modelo Cultural ECO.</span></div><div class="arrow">›</div></a>
-        <a class="card card-support" href="https://script.google.com/macros/s/AKfycbwl_JcqXzZ34eUQo7Intt8CvDHZmaipYftNKCL5YDo0zzMPP6Qwyw4TGrsmNeQ99JZm5A/exec?admin=1" aria-label="Registro de Asistencia"><div class="ico">▤</div><div class="copy"><strong>Registro de Asistencia</strong><span>Ingresa al registro administrativo de asistencia.</span></div><div class="arrow">›</div></a>
-      </div>
-    </section>
+      <section class="access-group model-secondary" aria-labelledby="secondary-title">
+        <h2 class="section-title" id="secondary-title">Otras herramientas de Modelo Cultural</h2>
+        <div class="grid">
+          <a class="card card-eval" href="https://script.google.com/macros/s/AKfycbwVc9C_FjO3FIoExhQmbmTb1W9lG9tEXowp3uJwD5T7BTdXPAdglYf_6cBlsoIPpgHW6w/exec" aria-label="Evaluación de Líderes 2027"><div class="ico">✓</div><div class="copy"><strong>Evaluación de Líderes 2027</strong><span>Accede a la evaluación del ciclo 2027.</span></div><div class="arrow">›</div></a>
+          <a class="card card-eval" href="https://script.google.com/macros/s/AKfycbyOpnMMsxWS2IUGZv-C00_dCzVudIj8ALtA3SkKn6IspXj98ALnMX0O-HfGWa2Q9HOY/exec" aria-label="Autoevaluación"><div class="ico">◎</div><div class="copy"><strong>Autoevaluación</strong><span>Consulta y responde tu autoevaluación ECO.</span></div><div class="arrow">›</div></a>
+          <a class="card" href="https://script.google.com/macros/s/AKfycbyV3v46Z4AfR2n4jxIPsKSeniYSd-csabPLtgfl5yxBmUXdp7J6Sm_EAWNo4mBEmxn3/exec" aria-label="Administración de Líderes">
+        <div class="ico">◎</div><div class="copy"><strong>Administración de Líderes</strong><span>Gestiona la información de tu equipo.</span></div><div class="arrow">›</div>
+      </a>
+          <a class="card" href="https://script.google.com/macros/s/AKfycbxrOUfT5NgbT91Gj0nkFRH2OUYhfzl80qW0lD4sLlbg0EugmYTsBp9OhnuKo2jxsc02Lw/exec" aria-label="Altas Rápidas">
+        <div class="ico">＋</div><div class="copy"><strong>Altas Rápidas</strong><span>Registro de colaboradores y asignaciones extraordinarias.</span></div><div class="arrow">›</div>
+      </a>
+          <a class="card card-support" href="https://script.google.com/macros/s/AKfycbwl_JcqXzZ34eUQo7Intt8CvDHZmaipYftNKCL5YDo0zzMPP6Qwyw4TGrsmNeQ99JZm5A/exec?admin=1" aria-label="Registro de Asistencia"><div class="ico">▤</div><div class="copy"><strong>Registro de Asistencia</strong><span>Ingresa al registro administrativo de asistencia.</span></div><div class="arrow">›</div></a>
+        </div>
+      </section>
     </main>
   </section>
   <footer>JUNTOS HACEMOS MÁS</footer>
