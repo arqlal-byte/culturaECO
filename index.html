@@ -6,11 +6,11 @@
   <meta name="theme-color" content="#050d19">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Cultura ECO">
-  <title>Cultura ECO</title>
-  <link rel="manifest" href="./manifest.json?v=4">
-  <link rel="apple-touch-icon" href="./icon.png?v=4">
-  <link rel="icon" type="image/png" href="./icon.png?v=4">
+  <meta name="apple-mobile-web-app-title" content="Ecosistema ECO">
+  <title>Ecosistema de Capital Humano | ECO</title>
+  <link rel="manifest" href="./manifest.json?v=5">
+  <link rel="apple-touch-icon" href="./icon.png?v=5">
+  <link rel="icon" type="image/png" href="./icon.png?v=5">
   <style>
     *{box-sizing:border-box}
     html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#050a12;color:#f6f7f8}
@@ -138,6 +138,46 @@ body.jarvis-intro-open{overflow:hidden}
   .jarvis-intro-avatar{width:min(53vw,215px)}}
 @media(prefers-reduced-motion:reduce){.jarvis-intro-panel,.jarvis-intro-avatar{animation:none}
   .jarvis-intro.is-leaving{transition:none}}
+
+    /* Ecosistema de Capital Humano — propuesta aprobada, 2026-11-12 */
+    .home-view[hidden],.model-view[hidden]{display:none!important}
+    .ecosystem-hero{text-align:center;background:radial-gradient(ellipse at 50% 42%,#123655 0%,#081b2d 48%,#050d19 89%);border-bottom:1px solid rgba(57,177,250,.26);padding:24px 15px 0}
+    .ecosystem-overline{margin:0 0 5px;color:#94dfff;font-size:11px;letter-spacing:.16em;font-weight:800}
+    .ecosystem-heading{font-size:clamp(19px,3vw,26px);line-height:1.26;max-width:720px;margin:0 auto 4px;font-weight:750;color:#f5fbff}
+    .ecosystem-hero .jarvis-eco-access{border:0;background:transparent;padding:19px 14px 27px}
+    .ecosystem-hero .jarvis-eco-link{width:min(71vw,320px)}
+    .ecosystem-hero .jarvis-eco-caption{margin-top:14px;font-size:17px}
+    .ecosystem-hero .jarvis-eco-subtitle{margin-top:6px}
+    .ecosystem-main,.model-main{padding:26px 20px 38px}
+    .global-tools .section-title,.modules-section .section-title{font-size:12px}
+    .modules-section{margin-top:34px;padding-top:22px;border-top:1px solid rgba(80,173,226,.22)}
+    .module-grid{margin-top:13px}
+    .module-card-primary{border-color:#4ac6ff;background:linear-gradient(125deg,#16466d,#10253f 76%);box-shadow:0 0 20px rgba(21,161,241,.17)}
+    .module-card-primary .copy span{color:#a8e9ff}
+    .module-card-inactive{cursor:default;opacity:.7;background:linear-gradient(145deg,#112438,#0a1929);border-color:#385068;box-shadow:none}
+    .module-card-inactive .ico{background:#203a52;color:#a6bbca;box-shadow:none}
+    .module-card-inactive .copy span{color:#a6bbc8}
+    .module-card-inactive .arrow{display:none}
+    .module-card-inactive:hover{border-color:#385068;box-shadow:none}
+    .model-back{display:inline-flex;align-items:center;min-height:44px;padding:10px 15px;margin:0 0 18px;color:#d1f3ff;background:#0c2c47;border:1px solid #4188b0;border-radius:12px;font-size:14px;font-weight:700;text-decoration:none}
+    .model-back:focus-visible{outline:3px solid #fff;outline-offset:3px}
+    .model-heading{padding:22px;border:1px solid rgba(70,163,220,.39);border-radius:20px;background:linear-gradient(125deg,#143753,#0b2137 75%);margin-bottom:23px}
+    .model-kicker{font-size:11px;letter-spacing:.14em;color:#8cddff;font-weight:750;text-transform:uppercase;margin:0 0 9px}
+    .model-heading h1{font-size:clamp(23px,4vw,30px);line-height:1.22;margin:0 0 8px}
+    .model-heading p:last-child{color:#bbd1df;font-size:14px;line-height:1.5;margin:0}
+    .model-admin .featured-access{margin-top:12px}
+    .model-view .access-group{margin-top:27px}
+    @media(max-width:640px){
+      .ecosystem-hero{padding:20px 12px 0}
+      .ecosystem-heading{font-size:19px}
+      .ecosystem-hero .jarvis-eco-link{width:min(75vw,290px)}
+      .ecosystem-hero .jarvis-eco-access{padding:18px 10px 22px}
+      .ecosystem-main,.model-main{padding:19px 14px 29px}
+      .modules-section{margin-top:27px;padding-top:20px}
+      .module-card{min-height:94px}
+      .model-heading{padding:18px}
+    }
+
 </style>
 </head>
 <body>
@@ -147,7 +187,7 @@ body.jarvis-intro-open{overflow:hidden}
     <img class="jarvis-intro-avatar" src="./NEXO%20ECO_%20HUD%20futurista%20animado.gif" alt="Nexo ECO animado" width="414" height="414" loading="eager">
     <div class="jarvis-intro-eyebrow">ECOSISTEMA ECO</div>
     <h2 id="jarvis-intro-title">Hola, soy NEXO</h2>
-    <p>Bienvenido a Cultura ECO</p>
+    <p>Bienvenido al Ecosistema de Capital Humano</p>
     <button class="jarvis-intro-continue" id="jarvis-intro-continue" type="button">Continuar</button>
   </div>
 </section>
@@ -155,10 +195,15 @@ body.jarvis-intro-open{overflow:hidden}
   <header class="top">
     <div class="brand">
       <img src="assets/eco-cocacola-oficial.png" alt="ECO Embotelladora de Colima Coca-Cola">
-      <span class="brand-badge">CULTURA ECO</span>
+      <span class="brand-badge">ECOSISTEMA CH</span>
     </div>
   </header>
-  <section class="jarvis-eco-access" aria-label="Acceso destacado a MonitorECO">
+
+  <section id="inicio" class="home-view" aria-label="Inicio del Ecosistema de Capital Humano">
+    <div class="ecosystem-hero">
+      <p class="ecosystem-overline">EMBOTELLADORA DE COLIMA</p>
+      <h1 class="ecosystem-heading">Ecosistema de Evaluación y Desarrollo del Capital Humano</h1>
+      <section class="jarvis-eco-access" aria-label="Acceso destacado a MonitorECO">
     <a class="jarvis-eco-link" href="https://script.google.com/macros/s/AKfycbwTkQW0NViOl-hbyfarXr3AxT55TtzCN8tGaaAVAQHduRBY3gVcSPWimXtnQWDe20tSJQ/exec" aria-label="Abrir MonitorECO mediante Nexo ECO">
       <img src="./NEXO%20ECO_%20HUD%20futurista%20animado.gif" alt="Nexo ECO, acceso animado a MonitorECO" loading="eager">
       <span class="jarvis-training-note">Tenme paciencia,<span>estoy en capacitación</span></span>
@@ -166,28 +211,55 @@ body.jarvis-intro-open{overflow:hidden}
     <p class="jarvis-eco-caption">Hola, soy Nexo</p>
     <p class="jarvis-eco-subtitle">¿Hay algo en lo que pueda ayudarte? Toca mi interfaz.</p>
   </section>
-  <main>
-    <p class="section-title">Administración y seguimiento</p>
-    <section class="grid">
-      <a class="card" href="https://script.google.com/macros/s/AKfycbxTui49EquNFCTt-h0Nv_q0yXWSGqpW8rdqf0gqFptFxAyZPmCQS3dhIPHxO4MLHrIV/exec" aria-label="Dashboard Ejecutivo">
+    </div>
+    <main class="ecosystem-main">
+      <section class="global-tools" aria-labelledby="tools-title">
+        <h2 class="section-title" id="tools-title">Herramientas generales</h2>
+        <div class="grid"><a class="card" href="https://script.google.com/macros/s/AKfycbxTui49EquNFCTt-h0Nv_q0yXWSGqpW8rdqf0gqFptFxAyZPmCQS3dhIPHxO4MLHrIV/exec" aria-label="Dashboard Ejecutivo">
         <div class="ico">▥</div><div class="copy"><strong>Dashboard Ejecutivo</strong><span>Información clave para la toma de decisiones.</span></div><div class="arrow">›</div>
       </a>
-      <a class="card" href="https://script.google.com/macros/s/AKfycbypyILYe_uB6zpAkV0HRwrejqZ2YPr-nvh10TwkInO9Z3L1BM1kUKZT7tiHuoDn2QyT/exec" aria-label="Seguimiento de actividades">
+<a class="card" href="https://script.google.com/macros/s/AKfycbypyILYe_uB6zpAkV0HRwrejqZ2YPr-nvh10TwkInO9Z3L1BM1kUKZT7tiHuoDn2QyT/exec" aria-label="Seguimiento de actividades">
         <div class="ico">↗</div><div class="copy"><strong>Seguimiento de actividades</strong><span>Consulta avances, cumplimiento y seguimiento.</span></div><div class="arrow">›</div>
-      </a>
-      <a class="card" href="https://script.google.com/macros/s/AKfycbyV3v46Z4AfR2n4jxIPsKSeniYSd-csabPLtgfl5yxBmUXdp7J6Sm_EAWNo4mBEmxn3/exec" aria-label="Administración de Líderes">
+      </a></div>
+      </section>
+      <section class="modules-section" aria-labelledby="modules-title">
+        <h2 class="section-title" id="modules-title">Módulos del Ecosistema</h2>
+        <div class="grid module-grid">
+          <a class="card module-card module-card-primary" href="#modelo-cultural" aria-label="Abrir módulo Modelo Cultural"><div class="ico" aria-hidden="true">♧</div><div class="copy"><strong>Modelo Cultural</strong><span>Acceder a las aplicaciones disponibles</span></div><div class="arrow" aria-hidden="true">›</div></a>
+<div class="card module-card module-card-inactive" aria-disabled="true"><div class="ico" aria-hidden="true">◉</div><div class="copy"><strong>NOM-035</strong><span>Próximamente</span></div><div class="arrow" aria-hidden="true"></div></div>
+<div class="card module-card module-card-inactive" aria-disabled="true"><div class="ico" aria-hidden="true">◌</div><div class="copy"><strong>Clima Laboral</strong><span>Próximamente</span></div><div class="arrow" aria-hidden="true"></div></div>
+<div class="card module-card module-card-inactive" aria-disabled="true"><div class="ico" aria-hidden="true">▥</div><div class="copy"><strong>Indicadores</strong><span>Próximamente</span></div><div class="arrow" aria-hidden="true"></div></div>
+<div class="card module-card module-card-inactive" aria-disabled="true"><div class="ico" aria-hidden="true">▤</div><div class="copy"><strong>Compensaciones</strong><span>Próximamente</span></div><div class="arrow" aria-hidden="true"></div></div>
+<div class="card module-card module-card-inactive" aria-disabled="true"><div class="ico" aria-hidden="true">♙</div><div class="copy"><strong>Desarrollo de Talento</strong><span>Próximamente</span></div><div class="arrow" aria-hidden="true"></div></div>
+<div class="card module-card module-card-inactive" aria-disabled="true"><div class="ico" aria-hidden="true">↗</div><div class="copy"><strong>Rutas de Desarrollo de Puestos</strong><span>Próximamente</span></div><div class="arrow" aria-hidden="true"></div></div>
+<div class="card module-card module-card-inactive" aria-disabled="true"><div class="ico" aria-hidden="true">✓</div><div class="copy"><strong>OT’s y Evaluación de Desempeño</strong><span>Próximamente</span></div><div class="arrow" aria-hidden="true"></div></div>
+        </div>
+      </section>
+    </main>
+  </section>
+  <section id="modelo-cultural" class="model-view" aria-labelledby="model-title" hidden>
+    <main class="model-main">
+      <a class="model-back" href="#inicio" aria-label="Regresar al Ecosistema de Capital Humano">‹ Regresar al Ecosistema</a>
+      <div class="model-heading">
+        <p class="model-kicker">Módulo 01 · Modelo Cultural</p>
+        <h1 id="model-title">Modelo Cultural ECO</h1>
+        <p>Evaluación, desarrollo y administración del Modelo Cultural ECO.</p>
+      </div>
+      <section class="model-admin" aria-labelledby="admin-title">
+        <h2 class="section-title" id="admin-title">Administración y seguimiento</h2>
+        <div class="grid"><a class="card" href="https://script.google.com/macros/s/AKfycbyV3v46Z4AfR2n4jxIPsKSeniYSd-csabPLtgfl5yxBmUXdp7J6Sm_EAWNo4mBEmxn3/exec" aria-label="Administración de Líderes">
         <div class="ico">◎</div><div class="copy"><strong>Administración de Líderes</strong><span>Gestiona la información de tu equipo.</span></div><div class="arrow">›</div>
       </a>
-      <a class="card" href="https://script.google.com/macros/s/AKfycbxrOUfT5NgbT91Gj0nkFRH2OUYhfzl80qW0lD4sLlbg0EugmYTsBp9OhnuKo2jxsc02Lw/exec" aria-label="Altas Rápidas">
+<a class="card" href="https://script.google.com/macros/s/AKfycbxrOUfT5NgbT91Gj0nkFRH2OUYhfzl80qW0lD4sLlbg0EugmYTsBp9OhnuKo2jxsc02Lw/exec" aria-label="Altas Rápidas">
         <div class="ico">＋</div><div class="copy"><strong>Altas Rápidas</strong><span>Registro de colaboradores y asignaciones extraordinarias.</span></div><div class="arrow">›</div>
-      </a>
-    </section>
-    <section class="featured-access" aria-label="Acceso principal de administración">
+      </a></div>
+        <section class="featured-access" aria-label="Acceso principal de administración">
       <a class="card card-feature" href="https://arqlal-byte.github.io/centro-administracion-eco/" aria-label="Centro de Administración">
         <div class="ico">▦</div><div class="copy"><strong>Centro de Administración</strong><span>Acceso a las herramientas de administración ECO.</span></div><div class="arrow">›</div>
       </a>
     </section>
-    <section class="access-group group-evaluations" aria-labelledby="evaluaciones-title">
+      </section>
+      <section class="access-group group-evaluations" aria-labelledby="evaluaciones-title">
       <h2 class="section-title" id="evaluaciones-title">Evaluaciones del Modelo Cultural</h2>
       <div class="grid">
         <a class="card card-eval" href="https://script.google.com/macros/s/AKfycbyYfau3oEdwrb4eoPjep-LbJijamSxF78QTVdj9jiNhP0DeMRJWCwb5zkKhMhMz8H7I/exec?page=admin" aria-label="Evaluación 360"><div class="ico">◉</div><div class="copy"><strong>Evaluación 360</strong><span>Evaluación de líderes desde distintas perspectivas.</span></div><div class="arrow">›</div></a>
@@ -195,21 +267,22 @@ body.jarvis-intro-open{overflow:hidden}
         <a class="card card-eval" href="https://script.google.com/macros/s/AKfycbyOpnMMsxWS2IUGZv-C00_dCzVudIj8ALtA3SkKn6IspXj98ALnMX0O-HfGWa2Q9HOY/exec" aria-label="Autoevaluación"><div class="ico">◎</div><div class="copy"><strong>Autoevaluación</strong><span>Consulta y responde tu autoevaluación ECO.</span></div><div class="arrow">›</div></a>
       </div>
     </section>
-    <section class="access-group group-personal" aria-labelledby="personal-title">
+      <section class="access-group group-personal" aria-labelledby="personal-title">
       <h2 class="section-title" id="personal-title">Desarrollo personal y familiar</h2>
       <div class="grid">
         <a class="card card-personal" href="https://arqlal-byte.github.io/mi-persona-eco/" aria-label="Mi Persona ECO"><div class="ico">♙</div><div class="copy"><strong>Mi Persona ECO</strong><span>Consulta tu perfil y da seguimiento a tu desarrollo.</span></div><div class="arrow">›</div></a>
         <a class="card card-personal" href="https://arqlal-byte.github.io/familiaECO/" aria-label="Familia ECO"><div class="ico">♡</div><div class="copy"><strong>Familia ECO</strong><span>Accede a las actividades para la familia.</span></div><div class="arrow">›</div></a>
       </div>
     </section>
-    <section class="access-group group-support" aria-labelledby="apoyo-title">
+      <section class="access-group group-support" aria-labelledby="apoyo-title">
       <h2 class="section-title" id="apoyo-title">Asistencia y herramientas de apoyo</h2>
       <div class="grid">
         <a class="card card-support" href="https://arqlal-byte.github.io/asistenteCulturaECO/" aria-label="Asistente ECO"><div class="ico">✦</div><div class="copy"><strong>Asistente ECO</strong><span>Consulta el asistente del Modelo Cultural ECO.</span></div><div class="arrow">›</div></a>
         <a class="card card-support" href="https://script.google.com/macros/s/AKfycbwl_JcqXzZ34eUQo7Intt8CvDHZmaipYftNKCL5YDo0zzMPP6Qwyw4TGrsmNeQ99JZm5A/exec?admin=1" aria-label="Registro de Asistencia"><div class="ico">▤</div><div class="copy"><strong>Registro de Asistencia</strong><span>Ingresa al registro administrativo de asistencia.</span></div><div class="arrow">›</div></a>
       </div>
     </section>
-  </main>
+    </main>
+  </section>
   <footer>JUNTOS HACEMOS MÁS</footer>
 </div>
 <script>
@@ -220,7 +293,7 @@ body.jarvis-intro-open{overflow:hidden}
   var continueButton=document.getElementById('jarvis-intro-continue');
   var app=document.querySelector('body > .app');
   if(!welcome||!continueButton)return;
-  var key='cultura-eco-jarvis-intro-v1',shown=false,preview=false;
+  var key='cultura-eco-nexo-intro-v2',shown=false,preview=false;
   try{shown=window.sessionStorage.getItem(key)==='1';}catch(e){}
   try{preview=new URLSearchParams(window.location.search).get('bienvenida')==='1';}catch(e){}
   if(shown&&!preview)return;
@@ -252,11 +325,30 @@ body.jarvis-intro-open{overflow:hidden}
   timeout=window.setTimeout(closeWelcome,4800);
 })();
 </script>
+
+<script>
+/* Navegación local entre el portal general y el módulo Modelo Cultural. */
+(function(){
+  'use strict';
+  const home=document.getElementById('inicio');
+  const model=document.getElementById('modelo-cultural');
+  if(!home||!model)return;
+  function updateView(){
+    const inModel=window.location.hash==='#modelo-cultural';
+    home.hidden=inModel;
+    model.hidden=!inModel;
+    document.title=inModel?'Modelo Cultural | Ecosistema ECO':'Ecosistema de Capital Humano | ECO';
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',updateView);
+  updateView();
+})();
+</script>
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', async () => {
       try {
-        const registration = await navigator.serviceWorker.register('./sw.js?v=4', { updateViaCache: 'none' });
+        const registration = await navigator.serviceWorker.register('./sw.js?v=5', { updateViaCache: 'none' });
         await registration.update();
       } catch (error) { /* El portal continúa disponible en línea sin PWA. */ }
     });
