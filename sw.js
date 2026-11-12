@@ -1,6 +1,6 @@
-/* Cultura ECO: la interfaz HTML siempre se consulta en red.
+/* Ecosistema ECO: la interfaz HTML siempre se consulta en red.
    Solo se conservan recursos visuales en caché como respaldo. */
-const CACHE = 'cultura-eco-assets-2026-11-08-v4';
+const CACHE = 'cultura-eco-assets-2026-11-12-v5';
 self.addEventListener('install', event => {
   event.waitUntil(self.skipWaiting());
 });
@@ -11,7 +11,7 @@ self.addEventListener('activate', event => {
     await self.clients.claim();
   })());
 });
-const OFFLINE_PAGE = '<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cultura ECO · Sin conexión</title><body style="font:16px system-ui;background:#050a12;color:#fff;padding:35px;text-align:center"><h1>Cultura ECO</h1><p>No hay conexión a internet. Conéctate y vuelve a abrir la aplicación para ver su versión actualizada.</p></body></html>';
+const OFFLINE_PAGE = '<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ecosistema ECO · Sin conexión</title><body style="font:16px system-ui;background:#050a12;color:#fff;padding:35px;text-align:center"><h1>Ecosistema ECO</h1><p>No hay conexión a internet. Conéctate y vuelve a abrir la aplicación para ver su versión actualizada.</p></body></html>';
 self.addEventListener('fetch', event => {
   const request = event.request;
   if (request.method !== 'GET') return;
