@@ -53,3 +53,12 @@ ACTUALIZACIÓN 2026-11-12 — SUBPORTAL NOM-035
 - Archivos afectados: index.html y LEEME.txt; sin modificaciones en Apps Script, Sheets ni despliegues de aplicaciones.
 - Respaldo recuperable: respaldo-culturaECO-2026-11-12-previo-NOM035.
 - Pendiente validar GitHub Pages, enlaces desde sesión corporativa, regreso e instalación móvil.
+
+
+ACTUALIZACIÓN 2026-11-17 — DASHBOARDS DEL ECOSISTEMA Y MODELO CULTURAL
+- Pantalla principal: Dashboard Ejecutivo se renombró Dashboard Ecosistema y su enlace se actualizó al despliegue corporativo proporcionado.
+- Modelo Cultural > Accesos principales: se incorporó Dashboard Modelo Cultural usando exactamente el enlace anterior del Dashboard Ejecutivo.
+- Los demás enlaces se conservaron; no se alteraron Apps Script, hojas, permisos, manifest.json ni sw.js.
+- Rama de respaldo previo: respaldo-culturaECO-2026-11-17-previo-dashboards
+- Verificación estática: estructura y conteo de enlaces intactos excepto el nuevo acceso adicional.
+- Pendiente de validación: navegación en GitHub Pages, permisos corporativos e instalación móvil. Prototipo en validación operativa.
