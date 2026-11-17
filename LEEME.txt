@@ -62,3 +62,12 @@ ACTUALIZACIÓN 2026-11-17 — DASHBOARDS DEL ECOSISTEMA Y MODELO CULTURAL
 - Rama de respaldo previo: respaldo-culturaECO-2026-11-17-previo-dashboards
 - Verificación estática: estructura y conteo de enlaces intactos excepto el nuevo acceso adicional.
 - Pendiente de validación: navegación en GitHub Pages, permisos corporativos e instalación móvil. Prototipo en validación operativa.
+
+
+ACTUALIZACIÓN 2026-11-17 — HABILITAR DASHBOARD NOM-035
+- Dentro de NOM-035, la tarjeta Dashboard pasó de «Próximamente» a acceso activo al despliegue corporativo de Apps Script proporcionado.
+- Las tarjetas Programa de actividades y Evaluación permanecen deshabilitadas y sin enlace.
+- Se conservaron la navegación, los accesos previos, la identidad visual y la PWA; no se modificaron Apps Script, Sheets, permisos ni otros archivos del repositorio.
+- Rama de respaldo anterior a esta edición: respaldo-culturaECO-2026-11-17-previo-dashboard-NOM035
+- Verificación estática: archivo actualizado y enlaces anteriores conservados, con un acceso nuevo para Dashboard NOM-035.
+- Pendiente: validación operativa de GitHub Pages, acceso con correo corporativo y revisión móvil por el responsable.
